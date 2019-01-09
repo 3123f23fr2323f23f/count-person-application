@@ -1,4 +1,4 @@
-entity Store {
+ entity Store {
 		name String required maxlength(250)
         address String required maxlength(250)
 }
