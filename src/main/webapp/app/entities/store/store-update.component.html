@@ -41,10 +41,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_store">Store</label>
-                    <select class="form-control" id="field_store" name="store" [(ngModel)]="store.store" >
+                    <label class="form-control-label" for="field_checkInCount">Check In Count</label>
+                    <select class="form-control" id="field_checkInCount" name="checkInCount" [(ngModel)]="store.checkInCount" >
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="checkInCountOption.id === store.store?.id ? store.store : checkInCountOption" *ngFor="let checkInCountOption of checkincounts; trackBy: trackCheckInCountById">{{checkInCountOption.id}}</option>
+                        <option [ngValue]="checkInCountOption.id === store.checkInCount?.id ? store.checkInCount : checkInCountOption" *ngFor="let checkInCountOption of checkincounts; trackBy: trackCheckInCountById">{{checkInCountOption.id}}</option>
                     </select>
                 </div>
             </div>

@@ -22,9 +22,9 @@
     ],
     "relationships": [
         {
-            "relationshipType": "many-to-one",
-            "relationshipName": "store",
+            "relationshipName": "checkInCount",
             "otherEntityName": "checkInCount",
+            "relationshipType": "many-to-one",
             "otherEntityField": "id"
         }
     ],

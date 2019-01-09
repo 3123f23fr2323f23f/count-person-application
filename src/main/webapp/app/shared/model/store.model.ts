@@ -4,9 +4,9 @@ export interface IStore {
     id?: number;
     name?: string;
     address?: string;
-    store?: ICheckInCount;
+    checkInCount?: ICheckInCount;
 }
 
 export class Store implements IStore {
-    constructor(public id?: number, public name?: string, public address?: string, public store?: ICheckInCount) {}
+    constructor(public id?: number, public name?: string, public address?: string, public checkInCount?: ICheckInCount) {}
 }

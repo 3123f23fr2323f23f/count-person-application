@@ -9,6 +9,6 @@ entity CheckInCount {
         countDate ZonedDateTime
 }
 
-relationship ManyToOne {
-  Store{store} to CheckInCount
+relationship OneToMany {
+  CheckInCount{store} to Store 
 }
