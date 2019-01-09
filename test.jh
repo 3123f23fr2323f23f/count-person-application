@@ -1,0 +1,14 @@
+entity Store {
+		name String required maxlength(250)
+        address String required maxlength(250)
+}
+
+entity CheckInCount {
+		in Integer   
+        out Integer   
+        date ZonedDateTime
+}
+
+relationship ManyToOne {
+  Store{store} to CheckInCount
+}
