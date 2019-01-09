@@ -4,9 +4,9 @@
 }
 
 entity CheckInCount {
-		in Integer   
-        out Integer   
-        date ZonedDateTime
+		personIn Integer   
+        personout Integer   
+        countDate ZonedDateTime
 }
 
 relationship ManyToOne {
