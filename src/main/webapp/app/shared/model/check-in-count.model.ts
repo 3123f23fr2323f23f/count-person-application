@@ -1,12 +1,20 @@
 import { Moment } from 'moment';
+import { IStore } from 'app/shared/model//store.model';
 
 export interface ICheckInCount {
     id?: number;
     personIn?: number;
     personout?: number;
     countDate?: Moment;
+    stores?: IStore[];
 }
 
 export class CheckInCount implements ICheckInCount {
-    constructor(public id?: number, public personIn?: number, public personout?: number, public countDate?: Moment) {}
+    constructor(
+        public id?: number,
+        public personIn?: number,
+        public personout?: number,
+        public countDate?: Moment,
+        public stores?: IStore[]
+    ) {}
 }

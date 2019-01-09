@@ -14,7 +14,14 @@
             "fieldType": "ZonedDateTime"
         }
     ],
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "store",
+            "otherEntityName": "store",
+            "otherEntityRelationshipName": "checkInCount"
+        }
+    ],
     "changelogDate": "20190109101030",
     "entityTableName": "check_in_count",
     "dto": "no",

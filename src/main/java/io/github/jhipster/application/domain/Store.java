@@ -36,8 +36,8 @@ public class Store implements Serializable {
     private String address;
 
     @ManyToOne
-    @JsonIgnoreProperties("")
-    private CheckInCount store;
+    @JsonIgnoreProperties("stores")
+    private CheckInCount checkInCount;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -74,17 +74,17 @@ public class Store implements Serializable {
         this.address = address;
     }
 
-    public CheckInCount getStore() {
-        return store;
+    public CheckInCount getCheckInCount() {
+        return checkInCount;
     }
 
-    public Store store(CheckInCount checkInCount) {
-        this.store = checkInCount;
+    public Store checkInCount(CheckInCount checkInCount) {
+        this.checkInCount = checkInCount;
         return this;
     }
 
-    public void setStore(CheckInCount checkInCount) {
-        this.store = checkInCount;
+    public void setCheckInCount(CheckInCount checkInCount) {
+        this.checkInCount = checkInCount;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

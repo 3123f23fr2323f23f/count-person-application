@@ -1,5 +1,6 @@
 package io.github.jhipster.application.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -7,6 +8,8 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -33,6 +36,9 @@ public class CheckInCount implements Serializable {
     @Column(name = "count_date")
     private ZonedDateTime countDate;
 
+    @OneToMany(mappedBy = "checkInCount")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Store> stores = new HashSet<>();
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -79,6 +85,31 @@ public class CheckInCount implements Serializable {
 
     public void setCountDate(ZonedDateTime countDate) {
         this.countDate = countDate;
+    }
+
+    public Set<Store> getStores() {
+        return stores;
+    }
+
+    public CheckInCount stores(Set<Store> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public CheckInCount addStore(Store store) {
+        this.stores.add(store);
+        store.setCheckInCount(this);
+        return this;
+    }
+
+    public CheckInCount removeStore(Store store) {
+        this.stores.remove(store);
+        store.setCheckInCount(null);
+        return this;
+    }
+
+    public void setStores(Set<Store> stores) {
+        this.stores = stores;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
