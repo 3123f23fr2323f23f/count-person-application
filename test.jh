@@ -10,5 +10,5 @@ entity CheckInCount {
 }
 
 relationship OneToMany {
-  CheckInCount{store} to Store 
+  Store{store} to  CheckInCount
 }
