@@ -16,10 +16,10 @@
     ],
     "relationships": [
         {
-            "relationshipType": "one-to-many",
             "relationshipName": "store",
             "otherEntityName": "store",
-            "otherEntityRelationshipName": "checkInCount"
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20190109101030",

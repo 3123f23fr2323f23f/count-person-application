@@ -22,10 +22,10 @@
     ],
     "relationships": [
         {
-            "relationshipName": "checkInCount",
+            "relationshipType": "one-to-many",
+            "relationshipName": "store",
             "otherEntityName": "checkInCount",
-            "relationshipType": "many-to-one",
-            "otherEntityField": "id"
+            "otherEntityRelationshipName": "store"
         }
     ],
     "changelogDate": "20190109101029",

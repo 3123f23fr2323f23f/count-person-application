@@ -1,6 +1,6 @@
 package io.github.jhipster.application.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,6 +8,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -35,10 +37,9 @@ public class Store implements Serializable {
     @Column(name = "address", length = 250, nullable = false)
     private String address;
 
-    @ManyToOne
-    @JsonIgnoreProperties("stores")
-    private CheckInCount checkInCount;
-
+    @OneToMany(mappedBy = "store")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<CheckInCount> stores = new HashSet<>();
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -74,17 +75,29 @@ public class Store implements Serializable {
         this.address = address;
     }
 
-    public CheckInCount getCheckInCount() {
-        return checkInCount;
+    public Set<CheckInCount> getStores() {
+        return stores;
     }
 
-    public Store checkInCount(CheckInCount checkInCount) {
-        this.checkInCount = checkInCount;
+    public Store stores(Set<CheckInCount> checkInCounts) {
+        this.stores = checkInCounts;
         return this;
     }
 
-    public void setCheckInCount(CheckInCount checkInCount) {
-        this.checkInCount = checkInCount;
+    public Store addStore(CheckInCount checkInCount) {
+        this.stores.add(checkInCount);
+        checkInCount.setStore(this);
+        return this;
+    }
+
+    public Store removeStore(CheckInCount checkInCount) {
+        this.stores.remove(checkInCount);
+        checkInCount.setStore(null);
+        return this;
+    }
+
+    public void setStores(Set<CheckInCount> checkInCounts) {
+        this.stores = checkInCounts;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
