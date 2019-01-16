@@ -4,9 +4,12 @@ import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import * as moment from 'moment';
 import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
+import { JhiAlertService } from 'ng-jhipster';
 
 import { ICheckInCount } from 'app/shared/model/check-in-count.model';
 import { CheckInCountService } from './check-in-count.service';
+import { IStore } from 'app/shared/model/store.model';
+import { StoreService } from 'app/entities/store';
 
 @Component({
     selector: 'jhi-check-in-count-update',
@@ -15,9 +18,16 @@ import { CheckInCountService } from './check-in-count.service';
 export class CheckInCountUpdateComponent implements OnInit {
     checkInCount: ICheckInCount;
     isSaving: boolean;
+
+    stores: IStore[];
     countDate: string;
 
-    constructor(protected checkInCountService: CheckInCountService, protected activatedRoute: ActivatedRoute) {}
+    constructor(
+        protected jhiAlertService: JhiAlertService,
+        protected checkInCountService: CheckInCountService,
+        protected storeService: StoreService,
+        protected activatedRoute: ActivatedRoute
+    ) {}
 
     ngOnInit() {
         this.isSaving = false;
@@ -25,6 +35,12 @@ export class CheckInCountUpdateComponent implements OnInit {
             this.checkInCount = checkInCount;
             this.countDate = this.checkInCount.countDate != null ? this.checkInCount.countDate.format(DATE_TIME_FORMAT) : null;
         });
+        this.storeService.query().subscribe(
+            (res: HttpResponse<IStore[]>) => {
+                this.stores = res.body;
+            },
+            (res: HttpErrorResponse) => this.onError(res.message)
+        );
     }
 
     previousState() {
@@ -52,5 +68,13 @@ export class CheckInCountUpdateComponent implements OnInit {
 
     protected onSaveError() {
         this.isSaving = false;
+    }
+
+    protected onError(errorMessage: string) {
+        this.jhiAlertService.error(errorMessage, null, null);
+    }
+
+    trackStoreById(index: number, item: IStore) {
+        return item.id;
     }
 }

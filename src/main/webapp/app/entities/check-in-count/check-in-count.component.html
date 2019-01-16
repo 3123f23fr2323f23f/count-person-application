@@ -18,6 +18,7 @@
             <th><span>Person In</span></th>
             <th><span>Personout</span></th>
             <th><span>Count Date</span></th>
+            <th><span>Store</span></th>
             <th></th>
             </tr>
             </thead>
@@ -27,6 +28,11 @@
                 <td>{{checkInCount.personIn}}</td>
                 <td>{{checkInCount.personout}}</td>
                 <td>{{checkInCount.countDate | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="checkInCount.store">
+                        <a [routerLink]="['../store', checkInCount.store?.id, 'view' ]" >{{checkInCount.store?.id}}</a>
+                    </div>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

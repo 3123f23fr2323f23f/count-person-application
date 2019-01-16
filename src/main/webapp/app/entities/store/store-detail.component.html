@@ -13,12 +13,6 @@
                 <dd>
                     <span>{{store.address}}</span>
                 </dd>
-                <dt><span>Check In Count</span></dt>
-                <dd>
-                    <div *ngIf="store.checkInCount">
-                        <a [routerLink]="['/check-in-count', store.checkInCount?.id, 'view']">{{store.checkInCount?.id}}</a>
-                    </div>
-                </dd>
             </dl>
 
             <button type="submit"

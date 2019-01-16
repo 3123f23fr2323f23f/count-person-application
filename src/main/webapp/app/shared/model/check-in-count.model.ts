@@ -6,7 +6,7 @@ export interface ICheckInCount {
     personIn?: number;
     personout?: number;
     countDate?: Moment;
-    stores?: IStore[];
+    store?: IStore;
 }
 
 export class CheckInCount implements ICheckInCount {
@@ -15,6 +15,6 @@ export class CheckInCount implements ICheckInCount {
         public personIn?: number,
         public personout?: number,
         public countDate?: Moment,
-        public stores?: IStore[]
+        public store?: IStore
     ) {}
 }
