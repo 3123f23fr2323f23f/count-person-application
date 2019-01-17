@@ -35,7 +35,7 @@ public class CheckInCount implements Serializable {
     private ZonedDateTime countDate;
 
     @ManyToOne
-    @JsonIgnoreProperties("stores")
+    @JsonIgnoreProperties("checkInCounts")
     private Store store;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

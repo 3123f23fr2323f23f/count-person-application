@@ -23,7 +23,7 @@
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "store",
+            "relationshipName": "checkInCount",
             "otherEntityName": "checkInCount",
             "otherEntityRelationshipName": "store"
         }
