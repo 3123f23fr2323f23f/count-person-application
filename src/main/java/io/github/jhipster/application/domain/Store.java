@@ -39,7 +39,7 @@ public class Store implements Serializable {
 
     @OneToMany(mappedBy = "store")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<CheckInCount> stores = new HashSet<>();
+    private Set<CheckInCount> checkInCounts = new HashSet<>();
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -75,29 +75,29 @@ public class Store implements Serializable {
         this.address = address;
     }
 
-    public Set<CheckInCount> getStores() {
-        return stores;
+    public Set<CheckInCount> getCheckInCounts() {
+        return checkInCounts;
     }
 
-    public Store stores(Set<CheckInCount> checkInCounts) {
-        this.stores = checkInCounts;
+    public Store checkInCounts(Set<CheckInCount> checkInCounts) {
+        this.checkInCounts = checkInCounts;
         return this;
     }
 
-    public Store addStore(CheckInCount checkInCount) {
-        this.stores.add(checkInCount);
+    public Store addCheckInCount(CheckInCount checkInCount) {
+        this.checkInCounts.add(checkInCount);
         checkInCount.setStore(this);
         return this;
     }
 
-    public Store removeStore(CheckInCount checkInCount) {
-        this.stores.remove(checkInCount);
+    public Store removeCheckInCount(CheckInCount checkInCount) {
+        this.checkInCounts.remove(checkInCount);
         checkInCount.setStore(null);
         return this;
     }
 
-    public void setStores(Set<CheckInCount> checkInCounts) {
-        this.stores = checkInCounts;
+    public void setCheckInCounts(Set<CheckInCount> checkInCounts) {
+        this.checkInCounts = checkInCounts;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
