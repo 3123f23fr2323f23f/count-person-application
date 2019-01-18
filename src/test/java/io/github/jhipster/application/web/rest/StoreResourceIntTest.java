@@ -1,6 +1,6 @@
 package io.github.jhipster.application.web.rest;
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 
 import io.github.jhipster.application.domain.Store;
 import io.github.jhipster.application.repository.StoreRepository;
@@ -37,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see StoreResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 public class StoreResourceIntTest {
 
     private static final String DEFAULT_NAME = "AAAAAAAAAA";

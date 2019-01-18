@@ -1,6 +1,6 @@
 package io.github.jhipster.application.repository;
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 import io.github.jhipster.application.config.Constants;
 import io.github.jhipster.application.config.audit.AuditEventConverter;
 import io.github.jhipster.application.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static io.github.jhipster.application.repository.CustomAuditEventReposito
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

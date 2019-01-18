@@ -4,7 +4,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, of } from 'rxjs';
 import { JhiEventManager } from 'ng-jhipster';
 
-import { CountPersonApplicationTestModule } from '../../../test.module';
+import { PeoplecounterTestModule } from '../../../test.module';
 import { CheckInCountDeleteDialogComponent } from 'app/entities/check-in-count/check-in-count-delete-dialog.component';
 import { CheckInCountService } from 'app/entities/check-in-count/check-in-count.service';
 
@@ -18,7 +18,7 @@ describe('Component Tests', () => {
 
         beforeEach(() => {
             TestBed.configureTestingModule({
-                imports: [CountPersonApplicationTestModule],
+                imports: [PeoplecounterTestModule],
                 declarations: [CheckInCountDeleteDialogComponent]
             })
                 .overrideTemplate(CheckInCountDeleteDialogComponent, '')

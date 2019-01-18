@@ -1,6 +1,6 @@
 package io.github.jhipster.application.config.timezone;
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 import io.github.jhipster.application.repository.timezone.DateTimeWrapper;
 import io.github.jhipster.application.repository.timezone.DateTimeWrapperRepository;
 import org.junit.Before;
@@ -23,7 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Unit tests for the UTC Hibernate configuration.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 public class HibernateTimeZoneTest {
 
     @Autowired

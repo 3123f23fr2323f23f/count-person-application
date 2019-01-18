@@ -1,7 +1,7 @@
 package io.github.jhipster.application.service.mapper;
 
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 import io.github.jhipster.application.domain.User;
 import io.github.jhipster.application.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see UserMapper
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 public class UserMapperTest {
 
     private static final String DEFAULT_LOGIN = "johndoe";

@@ -3,14 +3,14 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "count-person-application": {
+        "peoplecounter": {
             "root": "",
             "sourceRoot": "src/main/webapp",
             "projectType": "application",
             "architect": {}
         }
     },
-    "defaultProject": "count-person-application",
+    "defaultProject": "peoplecounter",
     "cli": {
         "packageManager": "npm"
     },

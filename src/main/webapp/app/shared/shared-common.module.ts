@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { CountPersonApplicationSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent } from './';
+import { PeoplecounterSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent } from './';
 
 @NgModule({
-    imports: [CountPersonApplicationSharedLibsModule],
+    imports: [PeoplecounterSharedLibsModule],
     declarations: [JhiAlertComponent, JhiAlertErrorComponent],
-    exports: [CountPersonApplicationSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent]
+    exports: [PeoplecounterSharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent]
 })
-export class CountPersonApplicationSharedCommonModule {}
+export class PeoplecounterSharedCommonModule {}

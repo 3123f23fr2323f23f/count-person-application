@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
-import { CountPersonApplicationTestModule } from '../../../test.module';
+import { PeoplecounterTestModule } from '../../../test.module';
 import { CheckInCountDetailComponent } from 'app/entities/check-in-count/check-in-count-detail.component';
 import { CheckInCount } from 'app/shared/model/check-in-count.model';
 
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
 
         beforeEach(() => {
             TestBed.configureTestingModule({
-                imports: [CountPersonApplicationTestModule],
+                imports: [PeoplecounterTestModule],
                 declarations: [CheckInCountDetailComponent],
                 providers: [{ provide: ActivatedRoute, useValue: route }]
             })

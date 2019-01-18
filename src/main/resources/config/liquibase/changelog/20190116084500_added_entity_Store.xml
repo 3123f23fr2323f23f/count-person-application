@@ -16,7 +16,7 @@
     <!--
         Added the entity Store.
     -->
-    <changeSet id="20190109101029-1" author="jhipster">
+    <changeSet id="20190116084500-1" author="jhipster">
         <createTable tableName="store">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>

@@ -11,12 +11,12 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
-import { CountPersonApplicationSharedModule } from 'app/shared';
-import { CountPersonApplicationCoreModule } from 'app/core';
-import { CountPersonApplicationAppRoutingModule } from './app-routing.module';
-import { CountPersonApplicationHomeModule } from './home/home.module';
-import { CountPersonApplicationAccountModule } from './account/account.module';
-import { CountPersonApplicationEntityModule } from './entities/entity.module';
+import { PeoplecounterSharedModule } from 'app/shared';
+import { PeoplecounterCoreModule } from 'app/core';
+import { PeoplecounterAppRoutingModule } from './app-routing.module';
+import { PeoplecounterHomeModule } from './home/home.module';
+import { PeoplecounterAccountModule } from './account/account.module';
+import { PeoplecounterEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
@@ -24,19 +24,19 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
 @NgModule({
     imports: [
         BrowserModule,
-        CountPersonApplicationAppRoutingModule,
+        PeoplecounterAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         NgJhipsterModule.forRoot({
             // set below to true to make alerts look like toast
             alertAsToast: false,
             alertTimeout: 5000
         }),
-        CountPersonApplicationSharedModule.forRoot(),
-        CountPersonApplicationCoreModule,
-        CountPersonApplicationHomeModule,
-        CountPersonApplicationAccountModule,
+        PeoplecounterSharedModule.forRoot(),
+        PeoplecounterCoreModule,
+        PeoplecounterHomeModule,
+        PeoplecounterAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
-        CountPersonApplicationEntityModule
+        PeoplecounterEntityModule
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
@@ -63,7 +63,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
     ],
     bootstrap: [JhiMainComponent]
 })
-export class CountPersonApplicationAppModule {
+export class PeoplecounterAppModule {
     constructor(private dpConfig: NgbDatepickerConfig) {
         this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
     }

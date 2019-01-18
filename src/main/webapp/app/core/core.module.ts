@@ -17,7 +17,7 @@ import locale from '@angular/common/locales/en';
         DatePipe
     ]
 })
-export class CountPersonApplicationCoreModule {
+export class PeoplecounterCoreModule {
     constructor() {
         registerLocaleData(locale);
     }

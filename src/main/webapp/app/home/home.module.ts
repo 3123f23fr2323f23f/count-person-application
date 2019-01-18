@@ -1,12 +1,12 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { CountPersonApplicationSharedModule } from 'app/shared';
+import { PeoplecounterSharedModule } from 'app/shared';
 import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
-    imports: [CountPersonApplicationSharedModule, RouterModule.forChild([HOME_ROUTE])],
+    imports: [PeoplecounterSharedModule, RouterModule.forChild([HOME_ROUTE])],
     declarations: [HomeComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class CountPersonApplicationHomeModule {}
+export class PeoplecounterHomeModule {}

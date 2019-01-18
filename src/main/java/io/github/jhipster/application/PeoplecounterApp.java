@@ -22,18 +22,18 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class CountPersonApplicationApp {
+public class PeoplecounterApp {
 
-    private static final Logger log = LoggerFactory.getLogger(CountPersonApplicationApp.class);
+    private static final Logger log = LoggerFactory.getLogger(PeoplecounterApp.class);
 
     private final Environment env;
 
-    public CountPersonApplicationApp(Environment env) {
+    public PeoplecounterApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes countPersonApplication.
+     * Initializes peoplecounter.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -58,7 +58,7 @@ public class CountPersonApplicationApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(CountPersonApplicationApp.class);
+        SpringApplication app = new SpringApplication(PeoplecounterApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

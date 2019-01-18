@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { CountPersonApplicationSharedModule } from 'app/shared';
+import { PeoplecounterSharedModule } from 'app/shared';
 import {
     CheckInCountComponent,
     CheckInCountDetailComponent,
@@ -15,7 +15,7 @@ import {
 const ENTITY_STATES = [...checkInCountRoute, ...checkInCountPopupRoute];
 
 @NgModule({
-    imports: [CountPersonApplicationSharedModule, RouterModule.forChild(ENTITY_STATES)],
+    imports: [PeoplecounterSharedModule, RouterModule.forChild(ENTITY_STATES)],
     declarations: [
         CheckInCountComponent,
         CheckInCountDetailComponent,
@@ -31,4 +31,4 @@ const ENTITY_STATES = [...checkInCountRoute, ...checkInCountPopupRoute];
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class CountPersonApplicationCheckInCountModule {}
+export class PeoplecounterCheckInCountModule {}

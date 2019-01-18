@@ -16,7 +16,7 @@
     <!--
         Added the entity CheckInCount.
     -->
-    <changeSet id="20190109101030-1" author="jhipster">
+    <changeSet id="20190116084501-1" author="jhipster">
         <createTable tableName="check_in_count">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>

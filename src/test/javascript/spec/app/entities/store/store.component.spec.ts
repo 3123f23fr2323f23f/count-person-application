@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { CountPersonApplicationTestModule } from '../../../test.module';
+import { PeoplecounterTestModule } from '../../../test.module';
 import { StoreComponent } from 'app/entities/store/store.component';
 import { StoreService } from 'app/entities/store/store.service';
 import { Store } from 'app/shared/model/store.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
         beforeEach(() => {
             TestBed.configureTestingModule({
-                imports: [CountPersonApplicationTestModule],
+                imports: [PeoplecounterTestModule],
                 declarations: [StoreComponent],
                 providers: []
             })

@@ -22,7 +22,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190109101030",
+    "changelogDate": "20190116084501",
     "entityTableName": "check_in_count",
     "dto": "no",
     "pagination": "no",

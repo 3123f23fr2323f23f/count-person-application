@@ -6,7 +6,7 @@
     <!--
         Added the constraints for entity CheckInCount.
     -->
-    <changeSet id="20190109101030-2" author="jhipster">
+    <changeSet id="20190116084501-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="store_id"
                                  baseTableName="check_in_count"

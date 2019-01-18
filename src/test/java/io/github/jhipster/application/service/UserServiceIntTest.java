@@ -1,6 +1,6 @@
 package io.github.jhipster.application.service;
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 import io.github.jhipster.application.config.Constants;
 import io.github.jhipster.application.domain.User;
 import io.github.jhipster.application.repository.UserRepository;
@@ -36,7 +36,7 @@ import static org.mockito.Mockito.when;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 @Transactional
 public class UserServiceIntTest {
 

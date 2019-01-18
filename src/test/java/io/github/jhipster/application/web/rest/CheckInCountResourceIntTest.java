@@ -1,6 +1,6 @@
 package io.github.jhipster.application.web.rest;
 
-import io.github.jhipster.application.CountPersonApplicationApp;
+import io.github.jhipster.application.PeoplecounterApp;
 
 import io.github.jhipster.application.domain.CheckInCount;
 import io.github.jhipster.application.repository.CheckInCountRepository;
@@ -42,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see CheckInCountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CountPersonApplicationApp.class)
+@SpringBootTest(classes = PeoplecounterApp.class)
 public class CheckInCountResourceIntTest {
 
     private static final Integer DEFAULT_PERSON_IN = 1;

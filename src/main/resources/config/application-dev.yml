@@ -36,8 +36,8 @@ spring:
             indent-output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://192.168.10.25:5432/countPersonApplication
-        username: ntqpostgrees
+        url: jdbc:postgresql://localhost:5432/peoplecounter
+        username: postgres
         password: 123456
         hikari:
             auto-commit: false
@@ -92,12 +92,12 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-                base64-secret: M2Q2ZjY0MTNiZDA2MTgwMWY1NjhkNWFlMDZhZTMxZDdjNDhmZDRkZjQ2MmViNGFkNjE4MTA2MzEzNDliMDQ3NGFlOGM0OGUxYzg5MjQ3MDAxM2Y0MDNmOTUyN2VhZDg5NzQ3OWZlYzNkOTc2ZTk0NTExYTY4N2U1YjExNmMzNTc=
+                base64-secret: NGZhMjRlYTk4MmUzNGMwOGNlMjQ2ZDJiOWY3Yjg5YWQ4OGY0NmVmYjhkNmNiNDg2YzAyOTE0NjFiMTMxMjQwNTNjNGMwMjdiMmNjYjUzYzk0Mzc4NzVlYWJkMTc1MWEwYzY3M2U4MjBiMTViNzkwZTU1Mjc5YjVlYTQ5ZWJjNzk=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: countPersonApplication@localhost
+        from: peoplecounter@localhost
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:

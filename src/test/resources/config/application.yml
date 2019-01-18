@@ -16,12 +16,12 @@
 
 spring:
     application:
-        name: countPersonApplication
+        name: peoplecounter
     cache:
         type: simple
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:countPersonApplication;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        url: jdbc:h2:mem:peoplecounter;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
         name:
         username:
         password:
@@ -87,7 +87,7 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: M2Q2ZjY0MTNiZDA2MTgwMWY1NjhkNWFlMDZhZTMxZDdjNDhmZDRkZjQ2MmViNGFkNjE4MTA2MzEzNDliMDQ3NGFlOGM0OGUxYzg5MjQ3MDAxM2Y0MDNmOTUyN2VhZDg5NzQ3OWZlYzNkOTc2ZTk0NTExYTY4N2U1YjExNmMzNTc=
+                base64-secret: NGZhMjRlYTk4MmUzNGMwOGNlMjQ2ZDJiOWY3Yjg5YWQ4OGY0NmVmYjhkNmNiNDg2YzAyOTE0NjFiMTMxMjQwNTNjNGMwMjdiMmNjYjUzYzk0Mzc4NzVlYWJkMTc1MWEwYzY3M2U4MjBiMTViNzkwZTU1Mjc5YjVlYTQ5ZWJjNzk=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

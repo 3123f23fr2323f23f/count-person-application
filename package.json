@@ -1,7 +1,7 @@
 {
-    "name": "count-person-application",
+    "name": "peoplecounter",
     "version": "0.0.0",
-    "description": "Description for countPersonApplication",
+    "description": "Description for peoplecounter",
     "private": true,
     "license": "UNLICENSED",
     "cacheDirectories": [
